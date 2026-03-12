@@ -9,6 +9,7 @@ import java.util.UUID;
 @Entity
 @Table(name = "ledger_entries")
 public class LedgerEntry {
+
     @Id
     private UUID id;
 
@@ -42,6 +43,10 @@ public class LedgerEntry {
 
     public UUID getTransactionId() {
         return transactionId;
+    }
+
+    public UUID getAccountId() {
+        return accountId;
     }
 
     public BigDecimal getAmount() {
